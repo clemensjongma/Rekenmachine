@@ -2,6 +2,101 @@
 <html lang="en">
 
 <style>
+input {
+       padding-right: 50px; 
+     
+    }
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  background-color: #888888;
+  padding: 35px;
+  grid-gap: 10px;
+  width: 500px;
+  height: 720px;
+  grid-row: 100px 100px 100px 100px 100px 100px;
+  margin: 25px;
+  border-radius: 35px;
+}
+
+button.mul { 
+        background-color: beige;
+        color: black;
+        font-size: 50px;
+        border-radius: 10px;
+
+}
+button.btn { 
+        background-color: beige;
+        color: black;
+        font-size: 30px;
+        border-radius: 50%;
+       
+}
+
+.sub { 
+        background-color: beige;
+        color: black;
+        font-size: 50px;
+        border-radius: 10px;
+
+}
+
+.add { 
+        background-color: beige;
+        color: black;
+        font-size: 40px;
+        border-radius: 10px;
+
+}
+
+button.clr { 
+        background-color: beige;
+        color: black;
+        font-size: 40px;
+        border-radius: 10px;
+
+}
+
+.div { 
+        background-color: beige;
+        color: black;
+        font-size: 40px;
+        border-radius: 10px;
+
+}
+
+button {
+        height: 100px;
+        width: 100px;
+        border-width: 10px;
+
+}
+
+button.calc { 
+        background-color: beige;
+        color: black;
+        font-size: 50px;
+        border-radius: 10px;
+        grid-column-start: 1;
+        grid-column-end: 5;
+}
+
+
+
+#input {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        height: 100px;
+        font-size: 20 px;
+        border-width: 10px;
+        text-align: right; 
+        color: black;
+        background-color: #a8d8d8;
+        border-radius: 30 px;
+        
+}
+
 
 </style>
 
@@ -11,37 +106,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></head>
 
 <body>
-    <h1>Rekenmachine</h1>
-    <input id="input" type="text" disabled></input>
-    <br/>
-    <button class="btn">7</button>
-    <button class="btn">8</button>
-    <button class="btn">9</button>
-    <button class="mul">*</button>
-    <br/>
-    <button class="btn">4</button>
-    <button class="btn">5</button>
-    <button class="btn">6</button>
-    <button class="sub">-</button>
-    <br/>
-    <button class="btn">1</button>
-    <button class="btn">2</button>
-    <button class="btn">3</button>
-    <button class="add">+</button>
-    <br/>
     
+        <div class="grid-container">
+        <input id="input" type="text" disabled></input>
     
-    <button class="btn">0</button>
-    <button class="btn">.</button>
-    <button class="div">/</button>
-    <button class="clr">C</button>
-    <br/>
-    
-    
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button class="mul">*</button>
 
-    <button id="Calc"> = </button>
-    <!-- button.btn*15 -->
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="sub">-</button>
+            
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="add">+</button>
 
+        <button class="btn">0</button>
+        <button class="btn">.</button>
+        <button class="div">/</button>
+        <button class="clr">C</button>
+
+        <button class="calc"> = </button>
+    </div>
     <p id="numberone"></p>
     <p id="numbertwo"></p> 
   
@@ -114,7 +204,7 @@
             $('#numberone').text(""); 
         });
 
-        $('#Calc').click(function(){
+        $('.calc').click(function(){
                 num2 = $('#input').val();
                 if(num2 ==""){
                     alert("Voer het tweede getal in");
