@@ -2,10 +2,7 @@
 <html lang="en">
 
 <style>
-input {
-       padding-right: 50px; 
-     
-    }
+
 .grid-container {
   display: grid;
   grid-template-columns: 100px 100px 100px 100px;
@@ -15,71 +12,80 @@ input {
   width: 500px;
   height: 720px;
   grid-row: 100px 100px 100px 100px 100px 100px;
-  margin: 25px;
+  margin-left: 25px;
   border-radius: 35px;
 }
 
 button.mul { 
         background-color: beige;
         color: black;
-        font-size: 50px;
+        font-size: 3em;
         border-radius: 10px;
-
+        text-align:center;
+        border-width: 10px;
 }
 button.btn { 
         background-color: beige;
-        color: black;
-        font-size: 30px;
+        color: #333333;
+        font-size: 3em;
         border-radius: 50%;
-       
+        height: 100px;
+        text-align: center;
+        
 }
 
-.sub { 
+button.sub { 
         background-color: beige;
-        color: black;
-        font-size: 50px;
+        color: #333333;
+        font-size: 3em;
         border-radius: 10px;
-
+        border-width: 10px;
 }
 
 .add { 
-        background-color: beige;
-        color: black;
-        font-size: 40px;
+        background-color: rgb(184, 184, 179);
+        color: #333333;
+        font-size: 3em;
         border-radius: 10px;
-
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 7;
+        size: 100%;
+        border-width: 10px;
+        border-bottom-color: #888888;
 }
 
-button.clr { 
-        background-color: beige;
-        color: black;
-        font-size: 40px;
+.clr { 
+        background-color: rgb(207, 142, 140);
+        color: #333333;
+        font-size: 3em;
         border-radius: 10px;
-
+        border-width: 10px;
+        border-bottom-color: #dbafaf;
+        border-left-color: #bbacac;
+        border-right-color: #d4b0b0
 }
 
 .div { 
         background-color: beige;
-        color: black;
-        font-size: 40px;
+        color: #333333;
+        font-size: 3em;
         border-radius: 10px;
-
-}
-
-button {
-        height: 100px;
-        width: 100px;
         border-width: 10px;
 
 }
 
+
+
 button.calc { 
-        background-color: beige;
-        color: black;
-        font-size: 50px;
-        border-radius: 10px;
         grid-column-start: 1;
-        grid-column-end: 5;
+        grid-column-end: 4;
+        background-color: beige;
+        color: #333333;
+        font-size: 3em;
+        border-radius: 10px;
+        border-width: 10px;
 }
 
 
@@ -88,12 +94,13 @@ button.calc {
         grid-column-start: 1;
         grid-column-end: 5;
         height: 100px;
-        font-size: 20 px;
+        font-size: 3em;
         border-width: 10px;
         text-align: right; 
-        color: black;
+        color: #333333;
         background-color: #a8d8d8;
         border-radius: 30 px;
+        text-align: center;
         
 }
 
@@ -113,28 +120,30 @@ button.calc {
         <button class="btn">7</button>
         <button class="btn">8</button>
         <button class="btn">9</button>
-        <button class="mul">*</button>
+        <button class="clr">C</button>
+        
 
         <button class="btn">4</button>
         <button class="btn">5</button>
         <button class="btn">6</button>
-        <button class="sub">-</button>
+        <button class="mul">*</button>
             
         <button class="btn">1</button>
         <button class="btn">2</button>
         <button class="btn">3</button>
-        <button class="add">+</button>
+        <button class="sub">-</button>
 
         <button class="btn">0</button>
         <button class="btn">.</button>
         <button class="div">/</button>
-        <button class="clr">C</button>
+        <button class="add">+</button>
 
-        <button class="calc"> = </button>
+        <button class="calc">=</button>
     </div>
+    <!--
     <p id="numberone"></p>
     <p id="numbertwo"></p> 
-  
+    -->
 
     <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
     <script>
